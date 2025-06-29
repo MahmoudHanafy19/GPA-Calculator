@@ -1,0 +1,236 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Header */
+header {
+    background-color: #1f1f1f;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+body.light-mode header {
+    background-color: #f1f1f1;
+    color: #000000;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+    font-size: 24px;
+}
+
+body.light-mode header a {
+    color: #000000;
+}
+
+/* Toggle Switch */
+.switch {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Container & Layout */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+.hero-enterDetails-content,
+.hero-displayDetailsRes-content,
+.result-section {
+    flex: 1;
+    min-width: 280px;
+    max-width: 100%;
+    height: auto;
+    min-height: 300px;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Dark mode boxes */
+.hero-enterDetails-content,
+.hero-displayDetailsRes-content,
+.result-section {
+    background-color: #1e1e1e;
+}
+
+.result-section {
+    background-color: #181818;
+    text-align: center;
+}
+
+body.light-mode .hero-enterDetails-content,
+body.light-mode .hero-displayDetailsRes-content {
+    background-color: #f1f1f1;
+    color: #000;
+}
+
+body.light-mode .result-section {
+    background-color: #eeeeee;
+}
+
+/* Inputs & Buttons */
+input,
+button {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+input {
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+body.light-mode input {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Subject List */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+li button {
+    width: auto;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+/* Calculate Button */
+#calculate-button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+#calculate-button:hover {
+    background-color: #45a049;
+}
+
+/* Scroll for Subject List */
+#subject_list {
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 200px;
+    margin-bottom: 10px;
+}
+
+/* Positioning Buttons at Bottom */
+.enter-form-wrapper,
+.subject-list-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.add-button-wrapper,
+.calc-button-wrapper {
+    text-align: center;
+}
+
+

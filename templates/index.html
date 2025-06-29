@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GPA Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body class="dark-mode">
+    <header>
+        <a href="index.html"><h1>GPA Calculator</h1></a>
+        <label class="switch">
+            <input type="checkbox" id="modeToggle" onchange="toggleMode()">
+            <span class="slider round"></span>
+        </label>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+
+            <!-- 🟢 إدخال المواد -->
+            <div class="hero-enterDetails-content">
+                <h2>Enter Subject</h2>
+                <div class="enter-form-wrapper">
+                    <input type="text" id="subject_name" placeholder="Subject Name" required>
+                    <input type="number" step="0.01" id="subject_grade" placeholder="Grade" required>
+                    <input type="number" id="subject_hours" placeholder="Hours" required>
+                    <div class="add-button-wrapper">
+                        <button onclick="addSubject()">Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 🟡 عرض المواد -->
+            <div class="hero-displayDetailsRes-content">
+                <h2>Subjects List</h2>
+                <div class="subject-list-wrapper">
+                    <ul id="subject_list"></ul>
+                    <div class="calc-button-wrapper">
+                        <button onclick="calculateGPA()" id="calculate-button">Calculate GPA</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 🔵 النتيجة -->
+            <div class="result-section">
+                <h2>Result</h2>
+                <div id="result"></div>
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>
