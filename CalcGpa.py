@@ -6,7 +6,7 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/calculate', methods=['POST'])  # ✅ هذا السطر هو المهم
+@app.route('/calculate', methods=['POST'])
 def calculate():
     data = request.get_json()
     subjects = data['subjects']
