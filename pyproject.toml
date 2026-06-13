@@ -1,2 +1,7 @@
-[project.scripts]
-app = "CalcGpa:app"
+[project]
+name = "gpa-calculator"
+version = "1.0.0"
+dependencies = ["flask"]
+
+[tool.vercel]
+entrypoint = "CalcGpa:app"
